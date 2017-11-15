@@ -1,17 +1,20 @@
-{% load materialize %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
-	<title>animations</title>
-	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<title>EXTROPY</title>
+	<link type="text/css" rel="stylesheet" href="{% static 'extropy/materialize/css/materialize.min.css' %}"  media="screen,projection"/>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="grid/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="grid/css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="grid/css/revealer.css" />
-	<link rel="stylesheet" type="text/css" href="grid/pater/pater.css" />
-	<link rel="stylesheet" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'extropy/grid/css/normalize.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'extropy/grid/css/demo.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'extropy/grid/css/revealer.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'extropy/grid/pater/pater.css' %}" />
+	<link rel="stylesheet" href="{% static 'extropy/style1.css' %}">
 	<script>document.documentElement.className = 'js';</script>
+	<link type="text/javascript" href="{% static 'extropy/grid/js/imagesloaded.pkgd.min.js' %}">
+	<link type="text/javascript" href="{% static 'extropy/grid/js/revealer.js' %}">
+	<link type="text/javascript" href="{% static 'extropy/grid/js/demo.js' %}">
 </head>
 <body>
 
@@ -634,9 +637,12 @@
 			</div>
 
 		</main>
-		<script src="grid/js/imagesloaded.pkgd.min.js"></script>
-		<script src="grid/js/revealer.js"></script>
-		<script src="grid/js/demo.js"></script>
+		<!-- <script src="{% static 'extropy/grid/js/imagesloaded.pkgd.min.js' %}"></script>
+		<script src="{% static 'extropy/grid/js/revealer.js' %}"></script>
+		<script src="{% static 'extropy/grid/js/demo.js' %}"></script> -->
+		<!-- <link type="text/javascript" href="{% static 'extropy/grid/js/imagesloaded.pkgd.min.js' %}">
+		<link type="text/javascript" href="{% static 'extropy/grid/js/revealer.js' %}">
+		<link type="text/javascript" href="{% static 'extropy/grid/js/demo.js' %}"> -->
 		<script>
 		{
 			const DOM = {};
@@ -668,7 +674,7 @@
 		<div class="ev-card" id="ev1">
 			<div class="backdrp"></div>
 			<div class="ev_card_img">
-				<img src="index.jpeg" />
+				<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -684,7 +690,7 @@
 		<div class="ev-card" id="ev2">
 			<div class="backdrp"></div>
 			<div class="ev_card_img">
-				<img src="index.jpeg" />
+				<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -700,7 +706,7 @@
 		<div class="ev-card" id="ev3">
 			<div class="backdrp"></div>
 			<div class="ev_card_img">
-				<img src="index.jpeg" />
+				<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -716,7 +722,7 @@
 		<div class="ev-card" id="ev4">
 			<div class="backdrp"></div>
 			<div class="ev_card_img">
-				<img src="index.jpeg" />
+				<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -732,7 +738,7 @@
 		<div class="ev-card" id="ev5">
 			<div class="backdrp"></div>
 			<div class="ev_card_img">
-				<img src="index.jpeg" />
+				<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -748,7 +754,7 @@
 		<div class="ev-card" id="ev6">
 			<div class="backdrp"></div>
 			<div class="ev_card_img">
-				<img src="index.jpeg" />
+				<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -764,7 +770,7 @@
 		<div class="ev-card" id="ev7">
 			<div class="backdrp"></div>
 		<div class="ev_card_img">
-			<img src="index.jpeg" />
+			<img src="{% static 'extropy/images/index.jpeg' %}" />
 			</div>
 			<div class = 'ev_card_heading'>
 				<p>
@@ -785,7 +791,7 @@
 		<div class="card-wrap">
 		<div id="#card-1" class="card">
 			<div class="card-image waves-effect waves-block waves-light">
-		      <img class="activator" src="index.jpeg">
+		      <img class="activator" src="{% static 'extropy/images/index.jpeg' %}">
 		    </div>
 		    <div class="card-content">
 		      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
@@ -798,7 +804,7 @@
 		</div>
 		<div id="#card-2" class="card">
 				<div class="card-image waves-effect waves-block waves-light">
-		      <img class="activator" src="index.jpeg">
+		      <img class="activator" src="{% static 'extropy/images/index.jpeg' %}">
 		    </div>
 		    <div class="card-content">
 		      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
@@ -811,7 +817,7 @@
 		</div>
 		<div id="#card-3" class="card">
 				<div class="card-image waves-effect waves-block waves-light">
-		      <img class="activator" src="index.jpeg">
+		      <img class="activator" src="{% static 'extropy/images/index.jpeg' %}">
 		    </div>
 		    <div class="card-content">
 		      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
@@ -826,15 +832,15 @@
 		</div>
 	</div>
 </div>
-<script src="js/js/lib/jquery.min.js"></script>
-<script src="materialize/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
-<script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-<script src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-<script src="snap.svg-min.js"></script>
-<script src="svg2bez.js"></script>
-<script src="parallax.js"></script>
+<script src="{% static 'extropy/js/js/lib/jquery.min.js' %}"></script>
+<script src="{% static 'extropy/materialize/js/materialize.min.js' %}"></script>
+<script src="{% static 'extropy/https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js' %}"></script>
+<script src="{% static 'extropy/js/scrollmagic/uncompressed/ScrollMagic.js' %}"></script>
+<script src="{% static 'extropy/js/scrollmagic/uncompressed/plugins/debug.addIndicators.js' %}"></script>
+<script src="{% static 'extropy/js/scrollmagic/uncompressed/plugins/animation.gsap.js' %}"></script>
+<script src="{% static 'extropy/snap.svg-min.js' %}"></script>
+<script src="{% static 'extropy/svg2bez.js' %}"></script>
+<script src="{% static 'extropy/parallax.js' %}"></script>
 <script type="text/javascript">
 {
 	var viewport_width = window.innerWidth;
