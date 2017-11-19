@@ -5,5 +5,8 @@ app_name = 'extropy'
 	
 urlpatterns = [
 	# extropy/
-	url(r'^$', views.index, name="index"),
+	url(r'^$', views.index, name='index'),
+	# extropy/register/
+	url(r'register/$', views.register, name='register'),
+
 ]

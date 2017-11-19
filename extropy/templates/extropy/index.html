@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>animations</title>
+	<title>EXTROPY</title>
 	<link type="text/css" rel="stylesheet" href="{% static 'extropy/materialize/css/materialize.min.css' %}"  media="screen,projection"/>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
@@ -24,7 +24,11 @@
 	<div id = "centre">EXTROPY</div>
 	<div id = "right">
 		<div class = "button" id = "events">EVENTS</div>
-		<div class = "button" id = "reg">REGISTER</div>
+		<div class = "button" id = "reg">
+			<a href="{% url 'extropy:register' %}">
+			REGISTER
+			</a>
+		</div>
 	</div>
 </header>
 <div class="univ-container">
