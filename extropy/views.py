@@ -18,6 +18,6 @@ def register(request):
 	else:
 		form = RegisterForm()
 
-	return render(request,'extropy/register_form.html',{'form': form })
+	return render(request,'extropy/register-form.html',{'form': form })
 
 	
