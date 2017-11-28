@@ -12,7 +12,7 @@
 	// from http://www.quirksmode.org/js/events_properties.html#position
 	grid_div = document.getElementsByClassName('section_1')[0];
 	const getMousePos = (e) => {
-		y_div = grid_div.offsetHeight;
+		y_div = 3*window.innerHeight;
 		let posx = 0;
 		let posy = 0;
 		if (!e) {let e = window.event};
@@ -226,7 +226,7 @@
 		onmousemove(ev) {
 			requestAnimationFrame(() => {
 				const mousepos = getMousePos(ev);
-				if (mousepos.x <= window.innerWidth && mousepos.y <= window.innerHeight) {
+				if (mousepos.x <= window.innerWidth && mousepos.y <= window.innerHeight && mousepos.x >= 0 && mousepos.y >= 0) {
 				const transX = 2*this.CONFIG.tilt.maxTranslationX/win.width*mousepos.x - this.CONFIG.tilt.maxTranslationX;
 				const transY = 2*this.CONFIG.tilt.maxTranslationY/win.height*mousepos.y - this.CONFIG.tilt.maxTranslationY;
 				this.grids[this.current].tilt({translateX: transX, translateY: transY});

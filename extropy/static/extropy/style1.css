@@ -1,3 +1,4 @@
+
 html{
 margin:0;
 padding:0;
@@ -9,13 +10,13 @@ margin: 0;
 padding: 0;
 height: 900vh;
 }
-/*
+
 .landing-page{
-    background: url('landing.svg');
-    background-size: cover;
-    background-position: center;
+position: absolute;
+top: 0px;
+border-bottom: 7px solid black;
 }
-*/
+
 header{
 display: flex;
 justify-content: space-between;
@@ -48,17 +49,27 @@ border: 2px solid black;
 
 #centre{
 font-size: 1.5em;
+    position: fixed;
+    left: 45%;
 }
 #left{
-display:flex;
-justify-content: flex-start;
+    left:20%;
 width: 450px;
 border-color:red;
+    position: fixed;
 }
 #right{
-display:flex;
-justify-content: flex-start;
+    left:65%;
 width: 450px;
+    position: fixed;
+}
+#menu{
+    left:90%;
+    position: fixed;
+}
+#close{
+    left:10%;
+    position: fixed;
 }
 
 .section_2{
@@ -91,21 +102,60 @@ padding:0;
 margin:0;
 align-self: center;
 }
+
+.about-trigger{
+    position: absolute;
+    top: 100vh;
+}
+
+.about-extropy{
+height: 100vh;
+border-bottom: 7px solid black;
+}
+
+.about-extropy .about-back{
+display: flex;
+position: absolute;
+top: 0;
+height: 100vh;
+overflow: hidden;
+}
+
+.about-back #about-svg{
+align-self: center;
+display: inline-block;
+position: relative;
+top: 0px;
+height: 100vh;
+width: auto;
+}
+
+
+.about-extropy .text{
+position: relative;
+top: -13vh;
+}
+
 .about-extropy h3{
-position:absolute;
-top:105%;
-color:tomato; 
-right:26%;
-    z-index: 101;
+display: inline-block;
+padding: 0 0 8px 0;
+position: relative;
+top: -50px;
+color: tomato;
+left:25%;
+font-size: 9.7vmin;
+z-index: 101;
+border-bottom: 5px solid black;
+border-radius: 5px;
 }
 .about-extropy p{
 position:relative;
-margin-top:-6%;
+margin-top: 0%;
 padding-bottom:5%;
-width:60%;
-left:20%;
-    z-index: 4;
-font-size:30px;
+width:50%;
+left:25%;
+z-index: 4;
+font-size: 3.9vmin;
 }
 .section_1{
 display: flex;
@@ -115,12 +165,20 @@ width: 800vw;
 width: 100vw;
 height: 100vh;
 }
-#about-layer-svg{
-    z-index:-10;
-    width: 100vw;
+#about-layer-svg {
+    z-index: -10;
     height: 200vh;
+    width: auto;
     position: absolute;
-    top:0;
+    top: 0;
+}
+#events-bckdrp{
+    height: 100vh;
+    width: auto;
+    position: absolute;
+    overflow-y: hidden;
+    z-index: -1;
+ 
 }
 #circle{
     z-index: 2;
@@ -138,6 +196,7 @@ background: transparent;
 margin:0;
 padding:0;
 border-left: 10px dashed black;
+z-index: 10;
 }
 
 .ev-card .backdrp{
@@ -157,7 +216,7 @@ margin:0;
 align-self: center;
 }
 .section_1_wrap{
-overflow-x: hidden;
+overflow: hidden;
 -webkit-perspective: 1000;
             perspective: 1000;
 }
@@ -174,6 +233,9 @@ overflow-x: hidden;
 ::-webkit-scrollbar-track {
   background: #ddd;
   border-radius: 20px;
+}
+.univ-container{
+    overflow-y: hidden;
 }
 
 .float-cont{
@@ -192,6 +254,7 @@ position: absolute;
 top: 50%;
 left: 8%;
 transition: all 0.1s;
+z-index: 9;
 }
 svg#Layer_1{
 padding: 0px;
@@ -232,9 +295,8 @@ display:none;
     top:1%;
 }
 .ev_card_about p{
-    font-size:15px;
+    font-size:18px;
     color:black;
-
 }
 .ev_card_img{
     position: relative;
@@ -250,21 +312,223 @@ img{
 
 .section_3{
 display: flex;
+flex-direction: column;
 height: 100vh;
-background: white;
+align-items: center;
+justify-content: space-evenly;
+background: steelblue;
+border-top: 30px solid #84B7DE;
 }
 
 .card-wrap{
 display: flex;
-justify-content: space-around;
 align-self: center;
-background: blue;
-height: 60%;
-width: 100%;
+justify-content: space-around;
+justify-content: space-evenly;
+background: seashell;
+height: auto;
+width: 60%;
 padding: 0;
+margin: 10px;
+border-radius: 5px;
+padding: 4% 0 4% 0;
 }
+
 .section_3 .card{
 display: inline-block;
-width: 30%;
+width: 35%;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.section_3 h1{
+    font-size: 3.3vw;
+    letter-spacing: 7px;
+    margin: 0.67em 0;
+    font-family: raleway;
+    font-weight: 500;
+    color: cornsilk;
+}
+
+
+.team-cont{
+    padding: 0;
+    margin: 0;
+    height: 70vw;
+    border-top: 30px solid #b1dcfb;
+}
+
+.check_1{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 5vh);
+    left:3vw;
+    border-style: solid;
+    background: url('images/satyaki.JPG');
+    background-size: cover;
+}
+.check_2{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 5vh);
+    left:41vw;
+    border-style: solid;
+    background: url('images/anup.JPG');
+    background-size: cover;
+}
+.check_3{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 5vh);
+    left:80vw;
+    border-style: solid;
+    background: url('images/saransh.JPG');
+    background-size: cover;
+}
+.check_4{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 12vw);
+    left:21.5vw;
+    border-style: solid;
+    background: url('images/shivam.JPG');
+    background-size: cover;
+}
+.check_5{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 12vw);
+    left:60.3vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_6{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 22.5vw);
+    left:3vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_7{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 22vw);
+    left:41vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_8{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 22.5vw);
+    left:80vw;
+    border-style: solid;
+    background: url('images/kreeti.JPG');
+    background-size: cover;
+}
+.check_9{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 34vw);
+    left:21.5vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_10{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 34vw);
+    left:60.3vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_11{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 41.5vw);
+    left:3vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_12{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 41.5vw);
+    left:41vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.check_13{
+    width:16vw;
+    height:16vw;
+    background-color: gold;
+    position: absolute;
+    top:calc(2120vh + 41.5vw);
+    left:80vw;
+    border-style: solid;
+    background: url('images/bandar.JPG');
+    background-size: cover;
+}
+.team-card{
+    display: inline-block;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.information-team{
+    text-align: left
+    background: transparent;
+    color: white;
+    font-size: 2vmin;
+    font-family: Lovelo;
+    font-feature-settings: 
+    padding: 5%;
+    width: 100%;
+    margin-top: 75%;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.team-header{
+    text-align: center;
+}
+
+.team-header h1{
+    display: inline-block;
+    font-weight: medium;
+    font-family: raleway;
+    font-size: 3.3vw;
+    letter-spacing: 7px;
+    font-weight: 500;
 }
